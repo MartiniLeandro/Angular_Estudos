@@ -1,0 +1,15 @@
+.small-text{
+    font-size: 12px;
+}
+.green-color{
+    color: green;
+    background: greenyellow;
+}
+.pretty{
+    background-color: black;
+    color: pink;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+}
