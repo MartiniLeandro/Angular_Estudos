@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-first-component',
@@ -12,4 +12,7 @@ export class FirstComponent {
   job:string = "Programmer";
   hobbie = ["Running"];
   car = {name: "Camaro"};
+
+  @Input() userName:string='';
+  @Input() data !: {email:string,idade:number};
 }
