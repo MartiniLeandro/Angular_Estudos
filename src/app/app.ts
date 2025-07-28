@@ -3,10 +3,11 @@ import { FirstComponent } from './components/first-component/first-component';
 import { ParentData } from './components/parent-data/parent-data';
 import { Directives } from './components/directives/directives';
 import { IfRender } from './components/if-render/if-render';
+import { Eventos } from "./components/eventos/eventos";
 
 @Component({
   selector: 'app-root',
-  imports: [FirstComponent,ParentData,Directives,IfRender],
+  imports: [FirstComponent, ParentData, Directives, IfRender, Eventos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
