@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Animal } from '../../Animal';
 
 @Component({
   selector: 'app-list-hander',
@@ -8,10 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './list-hander.css'
 })
 export class ListHander {
-  animals = [
-    {name:"Turca", type:"Dog"},
-    {name:"Tom", type:"Cat"},
-    {name:"Frida", type:"Cat"},
-    {name:"Bob", type:"Dog"},
-  ]
+  animals: Animal[] = [
+    {name:"Turca", type:"Dog",age:7},
+    {name:"Tom", type:"Cat", age:3},
+    {name:"Frida", type:"Cat", age: 4},
+    {name:"Bob", type:"Dog", age:2},
+]
 }
