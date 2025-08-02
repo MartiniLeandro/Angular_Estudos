@@ -6,10 +6,11 @@ import { IfRender } from './components/if-render/if-render';
 import { Eventos } from "./components/eventos/eventos";
 import { Emitter } from './components/emitter/emitter';
 import { ListHander } from "./components/list-hander/list-hander";
+import { PipeOperator } from "./components/pipe-operator/pipe-operator";
 
 @Component({
   selector: 'app-root',
-  imports: [FirstComponent, ParentData, Directives, IfRender, Eventos, Emitter, ListHander],
+  imports: [FirstComponent, ParentData, Directives, IfRender, Eventos, Emitter, ListHander, PipeOperator],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
