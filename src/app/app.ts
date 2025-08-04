@@ -9,10 +9,11 @@ import { Emitter } from './components/emitter/emitter';
 import { ListHander } from "./components/list-hander/list-hander";
 import { PipeOperator } from "./components/pipe-operator/pipe-operator";
 import { TwoWayBinding } from "./components/two-way-binding/two-way-binding";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [FirstComponent, ParentData, Directives, IfRender, Eventos, Emitter, ListHander, PipeOperator, TwoWayBinding, FormsModule],
+  imports: [FirstComponent, ParentData, Directives, IfRender, Eventos, Emitter, ListHander, PipeOperator, TwoWayBinding, FormsModule,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

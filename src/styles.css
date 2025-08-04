@@ -10,5 +10,6 @@ body{
 
 .class{
     border-bottom: 1px red solid;
+    border-top: 1px red solid;
     padding: 20px;
 }
