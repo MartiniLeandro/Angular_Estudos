@@ -1,6 +1,9 @@
 .header{
     padding: 30px;
     background-color: rgb(46, 46, 46);
+    display: flex;
+    gap: 20px;
+    justify-content:space-around;
 }
 
 .botton-header{
@@ -10,8 +13,10 @@
     background-color: grey;
     color: white;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .botton-header:hover{
     color: green;
 }
+
