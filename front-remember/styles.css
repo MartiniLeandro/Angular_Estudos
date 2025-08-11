@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(3, 131, 22, 0.74);
+}
+
+.div-navbar{
+    display: flex;
+    gap: 30px;
+}
+
+.btn-navbar{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.btn-navbar:hover{
+    background-color: green;
+    border-radius: 5px;
+}
+
+.img-logo{
+    width: 150px;
+}
+
+.div-input{
+    display: flex;
+    align-items: center;
+}
+
+.input-header{
+    height: 20px;
+}
+
+.fa-magnifying-glass{
+    height: 19px;
+    padding: 1px;
+    background-color: white;
+    border-radius: 0px 2px 2px 0px;
+}
