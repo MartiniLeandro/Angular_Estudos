@@ -62,7 +62,8 @@ main{
     align-items: center;
     max-width: 1200px;
     background-color: #4bd964;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+    height: auto;
     margin: 0 auto;
     flex: 1;
     box-shadow: 

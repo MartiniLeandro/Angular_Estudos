@@ -1,0 +1,131 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+header{
+    background-color: rgb(39, 39, 39);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-logo img{
+    width: 50px;
+}
+
+.navbar-logo h1{
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-links{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a{
+    text-decoration: none;
+    color: rgb(224, 146, 1);
+    font-weight: bold;
+}
+
+.navbar-find{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.navbar-find input{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(224, 146, 1);
+}
+
+.navbar-find i{
+    display: block;
+    color: white;
+}
+
+main{
+    margin: 10px auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+}
+
+.content p {
+    margin: 20px 0px 20px 0px;
+}
+
+.big-image{
+    border-radius: 10px;
+}
+
+.small-images{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.small-images img{
+    border-radius: 10px;
+    width: 70px;
+}
+
+.path-code{
+    color: rgb(75, 75, 75);
+}
+
+.price{
+    color: rgb(224, 146, 1);
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.stars{
+    color: rgb(1, 199, 1);
+}
+
+.main-options select{
+    display: block;
+    margin: 5px 0px 5px 0px;
+}
+
+.main-options input{
+    display: block;
+    margin-top: 5px;
+}
+
+.main-bottons{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cart, .btn-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+   border: 1px solid rgb(224, 146, 1);
+   padding: 15px;
+   background-color: rgb(39, 39, 39);
+   color: white;
+   border-radius: 8px;
+   width: 230px;
+   cursor: pointer;
+   
+}
