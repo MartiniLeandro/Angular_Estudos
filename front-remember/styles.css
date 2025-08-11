@@ -1,14 +1,19 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Helvetica
+    font-family: Helvetica;
 }
+
 
 header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(3, 131, 22, 0.74);
+    background-color: #24532f;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.3);
+
 }
 
 .div-navbar{
@@ -23,6 +28,7 @@ header{
     font-size: 20px;
     padding: 10px;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .btn-navbar:hover{
@@ -48,4 +54,70 @@ header{
     padding: 1px;
     background-color: white;
     border-radius: 0px 2px 2px 0px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    background-color: #4bd964;
+    height: calc(100vh - 100px);
+    margin: 0 auto;
+    flex: 1;
+    box-shadow: 
+  -8px 0 15px -5px rgba(0, 0, 0, 0.2),
+   8px 0 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.infos{
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 50vh;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    background-color: azure;
+    border: 2px solid black;
+}
+
+.infos h2{
+    font-size: 50px;
+}
+
+.values{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.revenue{
+    color: #27632a;
+    font-weight: bold;
+}
+
+.expense{
+    color: rgba(176, 0, 0, 0.74);
+    font-weight: bold;
+}
+
+.launches{
+    margin-top: 10px;
+}
+
+.launches h2 {
+    margin-left: 5px;
+}
+
+.launch{
+    padding: 10px;
+    margin: 5px;
+    background-color: #e6f4ea;    
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.launch p {
+    margin-top: 4px;
 }
