@@ -88,3 +88,11 @@ input[type="checkbox"]{
 .line-through{
     text-decoration: line-through;
 }
+
+.red{
+    background-color: red;
+}
+
+.red:hover{
+    background-color: rgb(246, 72, 72);
+}

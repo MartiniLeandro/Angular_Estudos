@@ -3,6 +3,7 @@
     <form #ngform="ngForm" class="add-item-form" (submit)="addItem()">
         <input type="text" id="item" placeholder="Digite o nome do item" [(ngModel)]="item" name="item">
         <button type="submit">Adicionar</button>
+        <button type="button" (click)="reset()" class="red">Limpar Lista</button>
     </form>
     <table>
         <thead>
@@ -16,8 +17,8 @@
                 @for(item of items; track item.id) {
                     <tr>
                         <td>{{ item.id}}</td>
-                        <td>{{item.nome}}</td>
-                        <td><input type="checkbox" value={{item.comprado}}></td>
+                        <td><span [ngClass]="{'line-through' : item.comprado}">{{item.nome}}</span></td>
+                        <td><input type="checkbox" value={{item.comprado}} (click)="riscarItem(item)" [checked]="item.comprado"></td>
                     </tr>
                 }
         </tbody>
