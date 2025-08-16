@@ -1,9 +1,8 @@
 import { Component, signal } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
-  imports: [MatButtonModule],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
