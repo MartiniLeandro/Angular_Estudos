@@ -1,0 +1,28 @@
+.spacer{
+    flex: 1 1 auto;
+}
+
+mat-toolbar{
+    background-color: rgb(34, 77, 231);
+}
+
+span { 
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.links{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-icon{
+    display: inline-block;
+}
