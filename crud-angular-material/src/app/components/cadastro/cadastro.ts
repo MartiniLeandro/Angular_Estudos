@@ -7,6 +7,7 @@ import {MatInputModule} from '@angular/material/input'
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button'
 import { Cliente } from './cliente';
+import { ClienteService } from '../../services/clienteService';
 
 
 @Component({
@@ -16,9 +17,11 @@ import { Cliente } from './cliente';
   styleUrl: './cadastro.scss'
 })
 export class Cadastro {
+  constructor(private clienteService:ClienteService){}
+
   cliente:Cliente = Cliente.newCliente()
 
   salvar(){
-    console.log(this.cliente);
+    this.clienteService.salvar(this.cliente);
   }
 }
