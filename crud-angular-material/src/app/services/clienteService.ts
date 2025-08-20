@@ -39,4 +39,9 @@ export class ClienteService {
 
     return allClientes.filter(cliente => cliente.nome?.indexOf(name) !== -1);
   }
+
+  buscarClientePorId(id:string):Cliente | undefined{
+    const allClientes = this.obterStorage();
+    return allClientes.find(cliente => cliente.id === id);
+  }
 }
