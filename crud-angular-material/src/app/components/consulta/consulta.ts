@@ -19,11 +19,16 @@ import { CommonModule } from '@angular/common';
 export class Consulta{
   constructor(private clienteService:ClienteService){}
 
+  nomeBusca='';
   listaClientes:Cliente[] = [];
   colunasTable:string[] = ["id","nome","cpf","dataNascimento","email"]
 
   ngOnInit(){
-    this.listaClientes = this.clienteService.pesquisarClientes("");
+    this.listaClientes = this.clienteService.allClientes();
+  }
+
+  filtroBusca(){
+    this.listaClientes = this.clienteService.ClientesByName(this.nomeBusca);
   }
 
 }

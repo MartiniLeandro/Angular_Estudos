@@ -27,7 +27,16 @@ export class ClienteService {
     localStorage.setItem(ClienteService.repo_clientes,JSON.stringify(clientesStorage))
   }
 
-  pesquisarClientes(nome:string):Cliente[]{
+  allClientes():Cliente[]{
     return this.obterStorage()
+  }
+
+  ClientesByName(name:string):Cliente[]{
+    const allClientes = this.obterStorage();
+    if(!name){
+      return allClientes;
+    }
+
+    return allClientes.filter(cliente => cliente.nome?.indexOf(name) !== -1);
   }
 }
