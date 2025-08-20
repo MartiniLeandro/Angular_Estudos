@@ -8,7 +8,7 @@ export class ClienteService {
 
   static repo_clientes = "_clientes"
   
-  obterStorage():Cliente[]{
+  private obterStorage():Cliente[]{
     const repositorioClientes = localStorage.getItem(ClienteService.repo_clientes);
     if(repositorioClientes){
       const clientes:Cliente[] = JSON.parse(repositorioClientes);
@@ -25,5 +25,9 @@ export class ClienteService {
     clientesStorage.push(cliente);
 
     localStorage.setItem(ClienteService.repo_clientes,JSON.stringify(clientesStorage))
+  }
+
+  pesquisarClientes(nome:string):Cliente[]{
+    return this.obterStorage()
   }
 }
