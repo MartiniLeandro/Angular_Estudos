@@ -44,4 +44,20 @@ export class ClienteService {
     const allClientes = this.obterStorage();
     return allClientes.find(cliente => cliente.id === id);
   }
+
+  atualizar(cliente:Cliente): void{
+    const allClientes = this.obterStorage();
+    allClientes.forEach(c => {
+      if(c.id === cliente.id){
+        Object.assign(c,cliente);
+      }
+    })
+    localStorage.setItem(ClienteService.repo_clientes,JSON.stringify(allClientes))
+  }
+
+  deletar(cliente:Cliente){
+    const allClientes = this.obterStorage();
+    const newList = allClientes.filter(c => c.id !== cliente.id);
+    localStorage.setItem(ClienteService.repo_clientes,JSON.stringify(newList));
+  }
 }

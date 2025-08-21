@@ -36,4 +36,13 @@ export class Consulta{
     this.router.navigate(['/cadastro'], {queryParams: {'id': id}});
   }
 
+  preparaDeletar(cliente:Cliente){
+    cliente.deletando = true;
+  }
+
+  deletar(cliente:Cliente){
+    this.clienteService.deletar(cliente);
+    this.ngOnInit()
+  }
+
 }
