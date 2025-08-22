@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { FormsModule } from '@angular/forms'
 import { MatTableModule } from '@angular/material/table'
 import {MatButtonModule} from '@angular/material/button'
-import { ClienteService } from '../../services/clienteService';
+import { ClienteService } from '../../services/cliente.service';
 import { Cliente } from '../cadastro/cliente';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';

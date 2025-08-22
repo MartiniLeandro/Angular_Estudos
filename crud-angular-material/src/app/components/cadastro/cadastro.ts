@@ -7,8 +7,10 @@ import {MatInputModule} from '@angular/material/input'
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button'
 import { Cliente } from './cliente';
-import { ClienteService } from '../../services/clienteService';
+import { ClienteService } from '../../services/cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { estados, municipios } from '../../models/brasilApi';
+import { BrasilApiService } from '../../services/brasil-api.service';
 
 
 @Component({
@@ -18,10 +20,12 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './cadastro.scss'
 })
 export class Cadastro {
-  constructor(private clienteService:ClienteService, private route:ActivatedRoute, private router:Router){}
+  constructor(private clienteService:ClienteService,private brasilApiService:BrasilApiService, private route:ActivatedRoute, private router:Router){}
 
   cliente:Cliente = Cliente.newCliente();
   atualizando:boolean = false;
+  estados:estados[] = [];
+  municipios:municipios[] = [];
 
   ngOnInit(){
     this.route.queryParamMap.subscribe((query:any) => {
@@ -35,6 +39,7 @@ export class Cadastro {
         }
       }
     })
+    this.listarUFs();
   }
 
   salvar(){
@@ -46,5 +51,10 @@ export class Cadastro {
       this.router.navigate(['/consulta'])
 
     }
+  }
+
+  listarUFs(){
+    this.brasilApiService.listarUFs().subscribe(
+      {next: listaEstados => console.log(listaEstados), error: erro => console.log(erro)});
   }
 }
