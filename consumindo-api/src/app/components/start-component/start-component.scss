@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.flexBox{
+    height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
