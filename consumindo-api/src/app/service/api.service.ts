@@ -16,6 +16,6 @@ export class ApiService {
   }
 
   postCategorias(novaCategoria:Categorias): Observable<Categorias> {
-    return this.http.post<Categorias>(this.apiUrl + "/posts", novaCategoria)
+    return this.http.post<Categorias>(this.apiUrl + "/categorias", novaCategoria)
   }
 }
