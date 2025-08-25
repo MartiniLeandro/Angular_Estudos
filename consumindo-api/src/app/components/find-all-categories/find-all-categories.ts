@@ -25,14 +25,4 @@ export class FindAllCategories {
     });
   }
 
-  postCategoria(): void{
-    this.apiService.postCategorias(this.newCategoria).subscribe({
-      next: newPost => {
-        this.categorias.push(newPost)
-        console.log("Post criado")
-      
-      },
-      error: erro => console.log(erro)
-    });
-  }
 }

@@ -1,9 +1,10 @@
+<div class="categories">
 @for (item of categorias; track item.id) {
-    <div>
-        <p>{{item.id}}</p>
-        <p>{{item.nome}}</p>
-        <p>{{item.descricao}}</p>
+    <div class="category">
+        <p><span>id:</span> {{item.id}}</p>
+        <p><span>nome:</span> {{item.nome}}</p>
+        <p><span>descrição:</span> {{item.descricao}}</p>
     </div>
-}
-
-<button type="button" (click)="postCategoria()">CRIAR POST</button>
+    }
+</div>
+    
