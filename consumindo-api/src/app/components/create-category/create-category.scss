@@ -1,0 +1,37 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 8px;
+    width: 500px;
+    height: 250px;
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+button{
+    padding: 10px;
+    width: 100px;
+    border-radius: 8px;
+    border: 2px solid rgb(255, 145, 0);
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: rgb(255, 145, 0);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}

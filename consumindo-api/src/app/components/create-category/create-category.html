@@ -1,1 +1,14 @@
-<p>create-category works!</p>
+<div class="container">
+  <h1>Crie uma categoria</h1>
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="nome">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Descrição</mat-label>
+    <input matInput [(ngModel)]="descricao">
+  </mat-form-field>
+  <div class="button">
+    <button type="click" (click)="criarCategoria()">criar</button>
+  </div>
+</div>
