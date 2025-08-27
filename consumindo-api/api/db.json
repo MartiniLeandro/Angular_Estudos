@@ -1,19 +1,19 @@
 {
   "categorias": [
     {
-      "id": "1",
-      "nome": "restaurantes",
-      "descricao": "lugares para alimentação"
-    },
-    {
-      "id": "2",
-      "nome": "Academia",
-      "descricao": "lugares para musculação"
-    },
-    {
       "id": "bd78",
       "nome": "Supermercado",
       "descricao": "Compras no supermercado"
+    },
+    {
+      "id": "5b06",
+      "nome": "Academia",
+      "descricao": "Local para treinar musculação"
+    },
+    {
+      "id": "587c",
+      "nome": "Faculdade",
+      "descricao": "Local para estudar"
     }
   ]
 }

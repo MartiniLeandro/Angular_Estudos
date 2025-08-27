@@ -1,0 +1,35 @@
+.container {
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+label{
+    color: white;
+    margin-right: 5px;
+}
+
+input{
+    padding: 5px 10px;
+}
+
+button{
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+.category{
+    background-color: rgb(36, 36, 36);
+    padding: 20px;
+    margin: auto;
+    width: fit-content;
+    border-radius: 10px;
+    color: white;
+}

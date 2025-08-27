@@ -18,4 +18,8 @@ export class ApiService {
   postCategorias(novaCategoria:Categorias): Observable<Categorias> {
     return this.http.post<Categorias>(this.apiUrl + "/categorias", novaCategoria)
   }
+
+  getCategoryById(id:string): Observable<Categorias>{
+    return this.http.get<Categorias>(`${this.apiUrl}/categorias/${id}`)
+  }
 }

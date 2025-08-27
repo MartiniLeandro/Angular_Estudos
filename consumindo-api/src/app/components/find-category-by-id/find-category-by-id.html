@@ -1,1 +1,14 @@
-<p>find-category-by-id works!</p>
+<div class="container">
+    <label for="">Digite o ID que deseja buscar: </label>
+    <input type="text" [(ngModel)]="id">
+    <button type="button" (click)="findById()">Buscar</button>
+</div>
+
+@if (showCategory == true) {
+    <div class="category">
+        <p><span>Id: </span> {{categoria.id}}</p>
+        <p><span>Nome: </span> {{categoria.nome}}</p>
+        <p><span>Descrição: </span> {{categoria.descricao}}</p>
+    </div>
+}
+
