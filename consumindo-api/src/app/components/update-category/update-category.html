@@ -1,1 +1,23 @@
-<p>update-category works!</p>
+<div class="container">
+    <div class="title">
+        <h1>Atualizar Classe</h1>
+    </div>
+    <div class="form">
+        <label for="">ID: </label>
+        <input type="text" [(ngModel)]="newCategory.id">
+        <label for="">Nome: </label>
+        <input type="text" [(ngModel)]="newCategory.nome">
+        <label for="">Descrição: </label>
+        <input type="text" [(ngModel)]="newCategory.descricao">
+        <button type="button" (click)="atualizarCategory()">Atualizar</button>
+    </div>
+</div>
+
+@if (showNewCategory == true) {
+    <div class="category">
+        <p><span>Id: </span> {{newCategory.id}}</p>
+        <p><span>Nome: </span> {{newCategory.nome}}</p>
+        <p><span>Descrição: </span> {{newCategory.descricao}}</p>
+    </div>
+}
+

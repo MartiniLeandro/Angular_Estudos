@@ -1,5 +1,5 @@
 export interface Categorias{
-    id?: string,
+    id: string,
     nome: string,
     descricao: string;
 }
