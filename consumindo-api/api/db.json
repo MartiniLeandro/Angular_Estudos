@@ -1,19 +1,19 @@
 {
   "categorias": [
     {
-      "id": "bd78",
-      "nome": "Supermercado",
-      "descricao": "Compras no supermercado"
-    },
-    {
-      "id": "5b06",
+      "id": "630f",
       "nome": "Transporte",
       "descricao": "Gastos com transporte"
     },
     {
-      "id": "587c",
+      "id": "c2a0",
+      "nome": "Supermercado",
+      "descricao": "Gastos com supermercado"
+    },
+    {
+      "id": "aab7",
       "nome": "Faculdade",
-      "descricao": "Local para estudar"
+      "descricao": "Gastos com faculdade"
     }
   ]
 }

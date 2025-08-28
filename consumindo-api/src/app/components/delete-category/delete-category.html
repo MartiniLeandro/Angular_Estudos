@@ -1,1 +1,11 @@
-<p>delete-category works!</p>
+<div class="container">
+    <label for="">Digite o ID que deseja deletar: </label>
+    <input type="text" [(ngModel)]="deletedCategory.id">
+    <button type="button" (click)="deletarCategoryFunction()">Deletar</button>
+</div>
+
+@if (deletarCategory) {
+    <div class="container">
+        <p>categoria deletada</p>
+    </div>
+}

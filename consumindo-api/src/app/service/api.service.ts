@@ -26,4 +26,8 @@ export class ApiService {
   updateCategory(id:string, categoria:Categorias): Observable<Categorias> {
     return this.http.put<Categorias>(`${this.apiUrl}/categorias/${id}`, categoria)
   }
+
+  DeleteCategory(id:string):Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/categorias/${id}`)
+  }
 }
