@@ -1,34 +1,29 @@
 <div class="container">
     <h1>MyTask App</h1>
     <div class="form">
-        <input type="text" name="" id="" placeholder="Nova atividade" class="input-form">
-        <button class="btn-form">Criar</button>
+        <input type="text" name="" id="" placeholder="Nova atividade" class="input-form" [(ngModel)]="taskName" (keyup.enter)="createTask()">
+        <button class="btn-form" (click)="createTask()">Criar</button>
     </div>
-    <div class="tasks">
-        <div class="task">
-            <p>lorem impsum</p>
-            <div class="buttons">
-                <button class="check">✔</button>
-                <button class="delete">🗑</button>
+    @for (task of allTasks; track task.id) {
+        <div class="tasks">
+            <div class="task">
+                @if (!task.editing) {
+                    <p [ngClass]="{'destaque': task.status === 'COMPLETED'}">{{task.taskName}}</p>
+                }@else {
+                    <input type="text" class="input-edit" placeholder="Editar nome" (keyup.enter)="editTaskName(task)" [(ngModel)]="taskNameEdited">
+                    <button class="btn-edit" (click)="editTaskName(task)">Editar</button>
+                }
+                <div class="buttons">
+                    @if (task.status === "NOT_COMPLETED") {
+                        <button class="check" (click)="checkTask(task)">✔</button>
+
+                    }@else {
+                        <button class="revert" (click)="revertTask(task)">↻</button>
+                    }
+                    <button class="edit" (click)="editTask(task)">✏️</button>
+                    <button class="delete" (click)="deleteTask(task)">🗑</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="tasks">
-        <div class="task">
-            <p>lorem impsum</p>
-            <div class="buttons">
-                <button class="check">✔</button>
-                <button class="delete">🗑</button>
-            </div>
-        </div>
-    </div>
-    <div class="tasks">
-        <div class="task">
-            <p>lorem impsum</p>
-            <div class="buttons">
-                <button class="check">✔</button>
-                <button class="delete">🗑</button>
-            </div>
-        </div>
-    </div>
+    }
 </div>
