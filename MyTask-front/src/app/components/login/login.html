@@ -4,7 +4,7 @@
         <label for="">Email*</label>
         <input type="email" placeholder="ex: user@email.com" class="input-login" [(ngModel)]="email">
         <label for="">Senha*</label>
-        <input type="password" placeholder="ex: 1234" class="input-login" [(ngModel)]="password">
+        <input type="password" placeholder="ex: 1234" class="input-login" [(ngModel)]="password" (keydown.enter)="login()">
         <button class="btn-login" (click)="login()">Entrar</button>
         <p class="p-login">caso deseja se cadastrar, <a routerLink="/register">clique aqui</a></p>
     </div>

@@ -11,8 +11,8 @@ export class LoginAPIService {
 
   urlAPI = "http://localhost:8080/auth"
 
-  loginUser(body:login):Observable<string>{
-    return this.http.post<string>(this.urlAPI + `/login`, body)
+  loginUser(body:login):Observable<{token:string}>{
+    return this.http.post<{token:string}>(this.urlAPI + `/login`, body)
   }
   
 }

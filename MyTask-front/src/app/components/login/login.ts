@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoginAPIService } from '../../services/login-api.service';
-import { login } from '../../models/Login';
 import { Router } from '@angular/router';
 import { RouterLink } from '@angular/router';
+import { login } from '../../models/Login';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +18,13 @@ export class Login {
   password:string = '';
 
   login(){
-    this.router.navigate(['/tasks'])
+    const userCredentials:login = {email:this.email, password:this.password};
+    this.loginAPI.loginUser(userCredentials).subscribe({next: token => {
+      console.log(token.token)
+      localStorage.setItem("token", token.token)
+      this.router.navigate(['/tasks'])
+    }, error: () =>{
+        alert(`Usuário não encontrado`)
+    }})
   }
 }
