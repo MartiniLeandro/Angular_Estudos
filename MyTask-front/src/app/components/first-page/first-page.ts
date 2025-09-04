@@ -25,6 +25,7 @@ export class FirstPage {
 
   findAllTasks(){
     this.taskAPI.findAllTasks().subscribe(allTasks => {
+      console.log(allTasks)
       this.allTasks = allTasks;
     }) 
   }
@@ -32,6 +33,7 @@ export class FirstPage {
   createTask(){
     let task:task = {taskName: this.taskName}
     this.taskAPI.createTask(task).subscribe({next: task => {
+      console.log(task)
       this.allTasks.push(task)
       task.editing = false
       this.taskName = '';
