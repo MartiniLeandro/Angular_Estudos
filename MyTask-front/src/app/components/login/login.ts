@@ -21,7 +21,7 @@ export class Login {
     const userCredentials:login = {email:this.email, password:this.password};
     this.loginAPI.loginUser(userCredentials).subscribe({next: token => {
       console.log(token.token)
-      localStorage.setItem("token", token.token)
+      sessionStorage.setItem("token", token.token)
       this.router.navigate(['/tasks'])
     }, error: () =>{
         alert(`Usuário não encontrado`)
