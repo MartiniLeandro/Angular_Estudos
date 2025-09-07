@@ -3,6 +3,7 @@ import { MyTaskAPI } from '../../services/my-task-api.service';
 import { task } from '../../models/Task';
 import { FormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-first-page',
@@ -11,7 +12,7 @@ import { NgClass } from '@angular/common';
   styleUrl: './first-page.scss'
 })
 export class FirstPage {
-  constructor(private taskAPI:MyTaskAPI){}
+  constructor(private taskAPI:MyTaskAPI, private snackBar:MatSnackBar){}
 
   allTasks:task[] = [];
   taskName:string = '';
@@ -33,12 +34,12 @@ export class FirstPage {
   createTask(){
     let task:task = {taskName: this.taskName}
     this.taskAPI.createTask(task).subscribe({next: task => {
-      console.log(task)
       this.allTasks.push(task)
+      this.snackBar.open("Task criada", "fechar")
       task.editing = false
       this.taskName = '';
     },
-      error: erro => alert(erro.error.msg)
+      error: erro => console.log(erro)
     },);
   }
 
@@ -46,11 +47,12 @@ export class FirstPage {
     let updatedTask:task = {taskName: this.taskNameEdited, status:"NOT_COMPLETED"}
     this.taskAPI.updateTask(updatedTask,task.id!).subscribe({next: task => {
       task.editing = false;
+      this.snackBar.open("task editada", "fechar")
       this.taskNameEdited = '';
       this.ngOnInit();},
 
       error: erro => {
-        alert(erro.error.msg);
+        console.log(erro);
       }
     })
   }
@@ -75,6 +77,7 @@ export class FirstPage {
 
   deleteTask(task:task){
     this.taskAPI.deleteTask(task.id!).subscribe(() => {
+      this.snackBar.open("task deletada", "fechar")
       this.allTasks = this.allTasks.filter(tasks => tasks.id !== task.id)
     })
   }

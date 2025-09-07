@@ -23,8 +23,8 @@ export class Login {
       console.log(token.token)
       sessionStorage.setItem("token", token.token)
       this.router.navigate(['/tasks'])
-    }, error: () =>{
-        alert(`Usuário não encontrado`)
+    }, error: (e) =>{
+        console.log(e)
     }})
   }
 }
