@@ -21,7 +21,7 @@ export class Register {
   registerUser(){
     const data:register = {name:this.name, email:this.email, password:this.password};
     this.api.registerUser(data).subscribe({next: (data) => {
-      this.snackBar.open("Usuário Cadastrado","fechar")
+      this.snackBar.open("Usuário Cadastrado","fechar", {duration: 3000})
       this.router.navigate(['/login'])
     },error: (e) => {
       console.log(e)

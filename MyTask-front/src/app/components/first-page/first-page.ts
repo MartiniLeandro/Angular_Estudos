@@ -4,6 +4,7 @@ import { task } from '../../models/Task';
 import { FormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-first-page',
@@ -12,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrl: './first-page.scss'
 })
 export class FirstPage {
-  constructor(private taskAPI:MyTaskAPI, private snackBar:MatSnackBar){}
+  constructor(private taskAPI:MyTaskAPI, private snackBar:MatSnackBar, private router:Router){}
 
   allTasks:task[] = [];
   taskName:string = '';
@@ -35,7 +36,7 @@ export class FirstPage {
     let task:task = {taskName: this.taskName}
     this.taskAPI.createTask(task).subscribe({next: task => {
       this.allTasks.push(task)
-      this.snackBar.open("Task criada", "fechar")
+      this.snackBar.open("Task criada", "fechar", {duration: 3000})
       task.editing = false
       this.taskName = '';
     },
@@ -47,7 +48,7 @@ export class FirstPage {
     let updatedTask:task = {taskName: this.taskNameEdited, status:"NOT_COMPLETED"}
     this.taskAPI.updateTask(updatedTask,task.id!).subscribe({next: task => {
       task.editing = false;
-      this.snackBar.open("task editada", "fechar")
+      this.snackBar.open("task editada", "fechar", {duration: 3000})
       this.taskNameEdited = '';
       this.ngOnInit();},
 
@@ -60,6 +61,7 @@ export class FirstPage {
   checkTask(task:task){
     let updatedTask:task = {taskName: task.taskName, status: "COMPLETED"}
     this.taskAPI.updateTask(updatedTask,task.id!).subscribe(() => {
+      this.snackBar.open("task concluída", "fechar", {duration: 3000})
       this.ngOnInit();
     });
   }
@@ -67,6 +69,7 @@ export class FirstPage {
   revertTask(task:task){
     let updatedTask:task = {taskName: task.taskName, status: "NOT_COMPLETED"}
     this.taskAPI.updateTask(updatedTask,task.id!).subscribe(() => {
+      this.snackBar.open("task não completa", "fechar", {duration: 3000})
       this.ngOnInit();
     });
   }
@@ -77,8 +80,14 @@ export class FirstPage {
 
   deleteTask(task:task){
     this.taskAPI.deleteTask(task.id!).subscribe(() => {
-      this.snackBar.open("task deletada", "fechar")
+      this.snackBar.open("task deletada", "fechar", {duration: 3000})
       this.allTasks = this.allTasks.filter(tasks => tasks.id !== task.id)
     })
+  }
+
+  logout(){
+    sessionStorage.removeItem("token")
+    this.snackBar.open("Usuário desconectado", "fechar", {duration: 3000})
+    this.router.navigate(['/login'])
   }
 }

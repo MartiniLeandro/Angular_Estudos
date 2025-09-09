@@ -9,7 +9,7 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   return next(req).pipe(
     catchError((erro) => {
       console.log(erro)
-      snackBar.open(erro.error.msg,"fechar")
+      snackBar.open(erro.error.msg,"fechar", {duration: 3000})
 
       return throwError(() => erro)
     })
