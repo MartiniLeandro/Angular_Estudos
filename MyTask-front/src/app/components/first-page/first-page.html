@@ -17,7 +17,7 @@
                 <div class="buttons">
                     @if (task.status === "NOT_COMPLETED") {
                         <button class="check" (click)="checkTask(task)">✔</button>
-
+                        
                     }@else {
                         <button class="revert" (click)="revertTask(task)">↻</button>
                     }
@@ -27,4 +27,10 @@
             </div>
         </div>
     }
+    <mat-paginator [length]="totalItens"
+              [pageSize]="6"
+              aria-label="Select page"
+              (page)="mudarPagina($event)"
+              >
+    </mat-paginator>
 </div>
