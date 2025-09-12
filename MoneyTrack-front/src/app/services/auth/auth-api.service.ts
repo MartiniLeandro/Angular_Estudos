@@ -13,11 +13,11 @@ export class AuthAPI {
   urlAPI = "http://localhost:8000/authentication"
 
   loginUser(body:login):Observable<{token:string}>{
-    return this.authAPI.post<{token:string}>(this.urlAPI, body);
+    return this.authAPI.post<{token:string}>(this.urlAPI + "/login", body);
   }
 
-  registerUser(body:register){
-    return null;
+  registerUser(body:register):Observable<register>{
+    return this.authAPI.post<register>(this.urlAPI + "/register",body)
   }
   
 }

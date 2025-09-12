@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthAPI } from '../../services/auth/auth-api.service';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './login.scss'
 })
 export class Login {
+  constructor(private authAPI:AuthAPI){}
+
+
 }
