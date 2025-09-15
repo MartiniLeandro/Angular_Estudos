@@ -10,7 +10,7 @@ import { register } from '../../models/registerData';
 export class AuthAPI {
   constructor(private authAPI:HttpClient){}
 
-  urlAPI = "http://localhost:8000/authentication"
+  urlAPI = "http://localhost:8080/authentication"
 
   loginUser(body:login):Observable<{token:string}>{
     return this.authAPI.post<{token:string}>(this.urlAPI + "/login", body);

@@ -3,14 +3,14 @@
     <div class="container-form">
         <div class="login">
             <label>Nome:*</label>
-            <input type="text" placeholder="ex: user" >
+            <input type="text" placeholder="ex: user" [(ngModel)]="nome" >
             <label>CPF:*</label>
-            <input type="text" placeholder="ex: 100.000.000-01" >
+            <input type="text" placeholder="ex: 100.000.000-01" [(ngModel)]="cpf">
             <label>Email:*</label>
-            <input type="email" placeholder="ex: user@email.com" >
+            <input type="email" placeholder="ex: user@email.com" [(ngModel)]="email">
             <label>Senha:*</label>
-            <input type="password" placeholder="ex: user123" >
-            <button class="login-btn">Cadastrar</button>
+            <input type="password" placeholder="ex: user123" [(ngModel)]="senha">
+            <button class="login-btn" (click)="registerUser()">Cadastrar</button>
             <p>Caso já possua cadastro, <a routerLink="/authentication/login">clique aqui</a></p>
         </div>
     </div>
