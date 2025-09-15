@@ -1,10 +1,13 @@
 <div class="container">
-    <div class="navbar">
-        <p>teste</p>
-    </div>
-    <div class="login-form">
-        <div>
-            <label>Email*</label>
+    <h1>Login</h1>
+    <div class="container-form">
+        <div class="login">
+            <label>Email:*</label>
+            <input type="email" placeholder="ex: user@email.com" [(ngModel)]="email">
+            <label>Senha:*</label>
+            <input type="password" placeholder="ex: user123" [(ngModel)]="senha">
+            <button class="login-btn" (click)="loginUser()">Entrar</button>
+            <p>Caso não possua cadastro, <a routerLink="/authentication/register">clique aqui</a></p>
         </div>
     </div>
 </div>
