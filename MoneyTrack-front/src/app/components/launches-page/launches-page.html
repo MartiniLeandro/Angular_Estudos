@@ -1,1 +1,28 @@
-<p>launches-page works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="months">
+        <p>teste</p>
+    </div>
+    <div class="value-tasks">
+        <div class="value">
+            <p>Receita: <Span class="receita">R$1500</Span></p>
+            <p>Despesa: <Span class="despesa">R$1000</Span></p>
+            <p>Restante: <span [ngClass]="value ? 'receita' : 'despesa'">R$500</span></p>
+        </div>
+        <div class="tasks">
+            @for (launch of launches; track launch.id) {
+                <div class="task">
+                    <div class="infos">
+                        <p class="categoryName">{{launch.category.name}}</p>
+                        <p class="description">{{launch.description}}</p>
+                    </div>
+                    <p>R${{launch.value}}</p>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="graphics">
+        tesste
+    
+    </div>
+</div>

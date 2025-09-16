@@ -10,7 +10,7 @@
 
 .container h1 {
     margin-bottom: 10px;
-    color: #00C853;
+    color: #184534;
     font-weight: bold;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .login-btn {
-    background-color: #00C853;
-    color: #121212;
+    background-color: #184534;
+    color: #ffff;
     border: none;
     padding: 10px;
     border-radius: 3px;
@@ -39,7 +39,7 @@
 }
 
 .login-btn:hover {
-    background-color: #00E676;
+    background-color: #205c45;
 }
 
 input {
@@ -47,7 +47,6 @@ input {
     border: none;
     margin: 10px 0px;
     border-radius: 3px;
-    background-color: #ffffff;
 }
 
 label {
@@ -64,12 +63,12 @@ label {
 
 .login p a {
     text-decoration: none;
-    color: #00C853;
+    color: #184534;
     cursor: pointer;
 }
 
 .login p a:hover{
-    color:#00E676;;
+    color:#205c45;
 }
 
 .container h1 {

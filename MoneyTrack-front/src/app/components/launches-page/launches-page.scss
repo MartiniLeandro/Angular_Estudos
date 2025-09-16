@@ -1,0 +1,72 @@
+.container {
+    background-color: #121212;
+    width: 100%;
+    height: calc(93vh - 20px);
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.value-tasks{
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.value {
+    background-color: #184534;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.tasks{
+    background-color: #184534;
+    flex: 1;
+    border-radius: 4px;
+}
+
+.graphics {
+    background-color: #184534;
+    flex-grow: 1;
+    margin: 0px 20px;
+}
+
+.months{
+    background-color: #184534;
+    flex-grow: 1;
+    margin: 0px 20px;
+}
+
+.task{
+    display: flex;
+    background-color: #121212;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+p {
+    color: white;
+}
+
+.categoryName{
+    font-weight: bolder;
+}
+
+.description{
+    font-family:'Roboto';
+    font-weight: 100
+}
+
+.receita {
+    color: green;
+}
+
+.despesa {
+    color: red;
+}
