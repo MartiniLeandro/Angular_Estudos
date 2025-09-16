@@ -22,11 +22,11 @@ export class Register {
 
   registerUser(){
     let newUser:register = {name:this.nome, cpf:this.cpf, email:this.email, password:this.senha} 
-    this.authAPI.registerUser(newUser).subscribe(data => {
+    this.authAPI.registerUser(newUser).subscribe({next: data => {
       console.log(data)
       this.router.navigate(['/authentication/login'])
       this.snackBar.open("Usuário cadastrado", "fechar", {duration:3000})
-    })
+    }, error: err => this.snackBar.open(err.error.message, "fechar", {duration: 3000})})
   }
 
 }

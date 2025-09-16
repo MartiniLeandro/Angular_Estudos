@@ -19,11 +19,11 @@ export class Login {
 
   loginUser() {
     let user:login = {email:this.email, password:this.senha}
-    this.authAPI.loginUser(user).subscribe(data => {
+    this.authAPI.loginUser(user).subscribe({next:data => {
       sessionStorage.setItem("token", data.token)
       this.router.navigate(['/user/launches'])
       this.snackBar.open("Você entrou!", "fechar", {duration: 3000})
-    })
+    }, error: error => this.snackBar.open(error.error.message, "fechar", {duration: 3000})})
   }
 
 }

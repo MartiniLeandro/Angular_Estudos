@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Register</h1>
     <div class="container-form">
-        <div class="login">
+        <div class="register">
             <label>Nome:*</label>
             <input type="text" placeholder="ex: user" [(ngModel)]="nome" >
             <label>CPF:*</label>
@@ -9,9 +9,9 @@
             <label>Email:*</label>
             <input type="email" placeholder="ex: user@email.com" [(ngModel)]="email">
             <label>Senha:*</label>
-            <input type="password" placeholder="ex: user123" [(ngModel)]="senha">
-            <button class="login-btn" (click)="registerUser()">Cadastrar</button>
-            <p>Caso já possua cadastro, <a routerLink="/authentication/login">clique aqui</a></p>
+            <input type="password" placeholder="ex: user123" [(ngModel)]="senha" (keyup.enter)="registerUser()">
+            <button class="register-btn" (click)="registerUser()">Cadastrar</button>
+            <p class="register-p">Caso já possua cadastro, <a routerLink="/authentication/login">clique aqui</a></p>
         </div>
     </div>
 </div>

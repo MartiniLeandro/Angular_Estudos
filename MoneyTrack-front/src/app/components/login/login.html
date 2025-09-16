@@ -5,7 +5,7 @@
             <label>Email:*</label>
             <input type="email" placeholder="ex: user@email.com" [(ngModel)]="email">
             <label>Senha:*</label>
-            <input type="password" placeholder="ex: user123" [(ngModel)]="senha">
+            <input type="password" placeholder="ex: user123" [(ngModel)]="senha" (keyup.enter)="loginUser()">
             <button class="login-btn" (click)="loginUser()">Entrar</button>
             <p>Caso não possua cadastro, <a routerLink="/authentication/register">clique aqui</a></p>
         </div>
