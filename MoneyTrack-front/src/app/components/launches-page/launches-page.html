@@ -1,7 +1,12 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <div class="months">
-        <p>teste</p>
+    <div class="expenses">
+        <div class="grapich-expense">
+            teste
+        </div>
+        <div class="categories-expense">
+            teste
+        </div>
     </div>
     <div class="value-tasks">
         <div class="value">
@@ -17,12 +22,20 @@
                         <p class="description">{{launch.description}}</p>
                     </div>
                     <p>R${{launch.value}}</p>
+                    <div class="task-btn">
+                        <button class="edit"><a routerLink="/user/launches/update">✏️</a></button>
+                        <button class="delete" (click)="deleteLaunch()">🗑️</button>
+                    </div>
                 </div>
             }
         </div>
     </div>
-    <div class="graphics">
-        tesste
-    
+    <div class="revenues">
+        <div class="grapich-revenue">
+            teste
+        </div>
+        <div class="categories-revenue">
+            teste
+        </div>
     </div>
 </div>

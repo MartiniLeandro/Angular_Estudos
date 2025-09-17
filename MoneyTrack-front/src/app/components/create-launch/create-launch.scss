@@ -1,0 +1,14 @@
+.container {
+    background-color: #121212;
+    width: 100%;
+    height: calc(93vh - 20px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.container-form{
+    background-color: #1E1E1E;
+    width: 40vw;
+}

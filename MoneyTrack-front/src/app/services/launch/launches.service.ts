@@ -12,7 +12,15 @@ export class Launches {
   urlAPI = "http://localhost:8080/user/launches"
 
   
-  getAllTasks():Observable<launch[]>{
+  getAllLaunches():Observable<launch[]>{
     return this.launchAPI.get<launch[]>(this.urlAPI)
+  }
+
+  updateLaunch(id:number,launch:launch):Observable<launch>{
+    return this.launchAPI.put<launch>(this.urlAPI + `/update/${id}`,launch)
+  }
+
+  deleteLaunch(id:number):Observable<void>{
+    return this.launchAPI.delete<void>(this.urlAPI + `delete/${id}`)
   }
 }

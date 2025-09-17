@@ -28,16 +28,13 @@
     border-radius: 4px;
 }
 
-.graphics {
+.revenues, .expenses {
     background-color: #184534;
     flex-grow: 1;
     margin: 0px 20px;
-}
-
-.months{
-    background-color: #184534;
-    flex-grow: 1;
-    margin: 0px 20px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
 }
 
 .task{
@@ -69,4 +66,19 @@ p {
 
 .despesa {
     color: red;
+}
+
+.task-btn {
+    display: flex;
+    gap: 5px;
+}
+
+.edit, .delete {
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+}
+
+.edit a {
+    text-decoration: none;
 }
