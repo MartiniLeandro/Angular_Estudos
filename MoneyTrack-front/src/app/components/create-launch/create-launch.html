@@ -2,10 +2,18 @@
 <div class="container">
     <div class="container-form">
         <div class="typeValue">
-            <button class="receive">Receita</button>
-            <button class="expense">Despesa</button>
+            <button class="receive" (click)="showRevenues()">Receita</button>
+            <button class="expense" (click)="showExpenses()">Despesa</button>
         </div>
-        <div class="categories">
+        <div  [ngClass]="{'categories':true, 'display-none':notShowExpenses}">
+            @for (item of categoriesExpense; track item.id) {
+                <p>{{item.name}}</p>
+            }
+        </div>
+        <div [ngClass]="{'categories':true, 'display-none':notShowRevenues}">
+            @for (item of categoriesRevenue; track item.id) {
+                <p>{{item.name}}</p>
+            }
         </div>
         <div class="forms-data">
             <label>Descrição*</label>
