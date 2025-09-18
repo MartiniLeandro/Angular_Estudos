@@ -1,7 +1,22 @@
 <app-navbar [text]="'Ver lançamentos'" [textLink]="'/user/launches'"></app-navbar>
 <div class="container">
     <div class="container-form">
-        <label>Categoria:</label>
-        <label>Categoria:</label>
+        <div class="typeValue">
+            <button class="receive">Receita</button>
+            <button class="expense">Despesa</button>
+        </div>
+        <div class="categories">
+        </div>
+        <div class="forms-data">
+            <label>Descrição*</label>
+            <input type="text" name="" id="" placeholder="Digite aqui">
+            <label>Valor*</label>
+            <input type="number" name="" id="" placeholder="Digite aqui">
+            <label>Data*</label>
+            <input type="date" name="" id="">
+        </div>
+        <div class="btn-launch">
+            <button>Criar Lançamento</button>
+        </div>
     </div>
 </div>
