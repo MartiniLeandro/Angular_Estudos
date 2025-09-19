@@ -7,12 +7,12 @@
         </div>
         <div  [ngClass]="{'categories':true, 'display-none':notShowExpenses}">
             @for (item of categoriesExpense; track item.id) {
-                <p>{{item.name}}</p>
+                <button [ngClass]="{'btn-category':true, 'toggleBtn':markBtn}" (click)="toggleBtn()">{{item.name}}</button>
             }
         </div>
         <div [ngClass]="{'categories':true, 'display-none':notShowRevenues}">
             @for (item of categoriesRevenue; track item.id) {
-                <p>{{item.name}}</p>
+                <button [ngClass]="{'btn-category':true, 'toggleBtn':markBtn}" (click)="toggleBtn()">{{item.name}}</button>
             }
         </div>
         <div class="forms-data">

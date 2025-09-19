@@ -17,6 +17,7 @@ export class CreateLaunch {
   categoriesRevenue:category[] = [];
   notShowExpenses:boolean = true
   notShowRevenues:boolean = true
+  markBtn:boolean = false;
 
   ngOnInit(){
     this.getCategories()
@@ -44,5 +45,10 @@ export class CreateLaunch {
   showRevenues(){
     this.notShowRevenues = false;
     this.notShowExpenses = true
+  }
+
+  toggleBtn(){
+    this.markBtn = !this.markBtn
+    
   }
 }
