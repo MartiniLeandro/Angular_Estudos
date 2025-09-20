@@ -14,5 +14,9 @@ export class CategoryAPI {
   getAllCategories():Observable<category[]>{
     return this.api.get<category[]>(this.urlAPI);
   }
+
+  getCategoryById(id:number):Observable<category>{
+    return this.api.get<category>(this.urlAPI + `/${id}`)
+  }
   
 }
