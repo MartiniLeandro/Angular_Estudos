@@ -14,7 +14,7 @@
     row-gap: 50px;
 }
 
-.value {
+.values {
     background-color: #1E1E1E;
     display: flex;
     padding: 20px;
@@ -81,4 +81,9 @@ p {
 
 .edit a {
     text-decoration: none;
+}
+
+.value-absolut {
+    position: absolute;
+    left: 50%;
 }

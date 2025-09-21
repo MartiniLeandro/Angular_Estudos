@@ -1,8 +1,8 @@
 .navbar {
-    background-color: #0C4C31;
+    background-color: #184534;
     height: 7vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5); 
 }
@@ -15,4 +15,9 @@
     text-decoration: none;
     color: #ffff;
     cursor: pointer;
+}
+
+.img {
+    width: 100px;
+    margin-top: 5px;
 }

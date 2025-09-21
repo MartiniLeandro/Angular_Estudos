@@ -17,6 +17,9 @@ export class LaunchesPage {
   constructor(private launchService:Launches, private dialog:MatDialog){}
 
   launches:launch[] = [];
+  revenueValue:number = 0;
+  expenseValue:number = 0;
+  totalValue:number = 0;
   value=true;
 
   ngOnInit(){
@@ -30,7 +33,24 @@ export class LaunchesPage {
   showLaunches(){
     this.launchService.getAllLaunches().subscribe(data => {
       this.launches = data;
+      for(let launch of this.launches){
+        if(launch.category.typeValue == "REVENUE"){
+          this.revenueValue += launch.value
+        }else {
+          this.expenseValue += launch.value
+        }
+      }
+      this.totalValue = this.revenueValue - this.expenseValue;
+      this.remainderValue();
     })
+  }
+
+  remainderValue(){
+    if(this.totalValue <= 0){
+      this.value = false
+    }else{
+      this.value = true
+    }
   }
 
 }

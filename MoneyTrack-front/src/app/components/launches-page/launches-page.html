@@ -9,10 +9,10 @@
         </div>
     </div>
     <div class="value-tasks">
-        <div class="value">
-            <p>Receita: <Span class="receita">R$1500</Span></p>
-            <p>Despesa: <Span class="despesa">R$1000</Span></p>
-            <p>Restante: <span [ngClass]="value ? 'receita' : 'despesa'">R$500</span></p>
+        <div class="values">
+            <p>Receita: <Span class="receita">R${{revenueValue}}</Span></p>
+            <p>Despesa: <Span class="despesa">R${{expenseValue}}</Span></p>
+            <p>Restante: <span [ngClass]="value ? 'receita' : 'despesa'">R${{totalValue}}</span></p>
         </div>
         <div class="tasks">
             @for (launch of launches; track launch.id) {
@@ -21,7 +21,7 @@
                         <p class="categoryName">{{launch.category.name}}</p>
                         <p class="description">{{launch.description}}</p>
                     </div>
-                    <p>R${{launch.value}}</p>
+                    <p class="value-absolut">R${{launch.value}}</p>
                     <div class="task-btn">
                         <button class="edit"><a routerLink="/user/launches/update">✏️</a></button>
                         <button class="delete" (click)="deleteLaunch()">🗑️</button>
