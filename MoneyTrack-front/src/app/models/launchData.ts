@@ -1,7 +1,7 @@
 import { category } from "./categoryData";
 
 export interface launch{
-    id:number,
+    id?:number,
     description:string,
     category:category,  
     value:number,

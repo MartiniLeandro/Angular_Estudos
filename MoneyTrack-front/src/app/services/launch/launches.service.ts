@@ -23,4 +23,8 @@ export class Launches {
   deleteLaunch(id:number):Observable<void>{
     return this.launchAPI.delete<void>(this.urlAPI + `delete/${id}`)
   }
+
+  createLaunch(launch:launch):Observable<launch>{
+  return this.launchAPI.post<launch>(this.urlAPI + "/create", launch)
+  }
 }
