@@ -16,6 +16,10 @@ export class Launches {
     return this.launchAPI.get<launch[]>(this.urlAPI)
   }
 
+  getLaunchById(id:number):Observable<launch>{
+    return this.launchAPI.get<launch>(this.urlAPI + `/${id}`)
+  }
+
   updateLaunch(id:number,launch:launch):Observable<launch>{
     return this.launchAPI.put<launch>(this.urlAPI + `/update/${id}`,launch)
   }

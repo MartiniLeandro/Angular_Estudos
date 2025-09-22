@@ -73,6 +73,10 @@ p {
     gap: 5px;
 }
 
+.task-btn button {
+    cursor: pointer;
+}
+
 .edit, .delete {
     padding: 4px;
     border-radius: 4px;

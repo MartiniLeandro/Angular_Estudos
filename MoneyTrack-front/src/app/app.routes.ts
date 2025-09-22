@@ -11,5 +11,5 @@ export const routes: Routes = [
     {path:'authentication/register', component:Register},
     {path:'user/launches', component:LaunchesPage},
     {path:'user/launches/create', component:CreateLaunch},
-    {path:'user/launches/update', component:UpdateLaunch}
+    {path:'user/launches/update/:id', component:UpdateLaunch}
 ];
