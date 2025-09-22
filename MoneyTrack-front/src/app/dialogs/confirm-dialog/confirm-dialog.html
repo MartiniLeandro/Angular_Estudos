@@ -1,12 +1,9 @@
-<h1 mat-dialog-title>Confirmar Ação</h1>
-
-<div mat-dialog-content>
-  <p>Você tem certeza que deseja executar esta ação?</p>
-  <p>Esta operação não pode ser desfeita.</p>
+<h1 mat-dialog-title class="h1-dialog">Confirmar Ação</h1>
+<div mat-dialog-content class="div-dialog">
+  <p class="p-dialog">Você tem certeza que deseja executar esta ação?</p>
+  <p class="p-dialog">Esta operação não pode ser desfeita.</p>
 </div>
-
-<div mat-dialog-actions align="end">
-  <button mat-button>Cancelar</button>
-  
-  <button mat-raised-button color="primary" cdkFocusInitial>Confirmar</button>
+<div mat-dialog-actions align="end" class="div-btn-dialog">
+  <button mat-button class="btn-dialog" (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" class="btn-dialog" cdkFocusInitial (click)="onConfirm()">Confirmar</button>
 </div>

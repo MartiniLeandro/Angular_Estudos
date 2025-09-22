@@ -24,7 +24,7 @@
                     <p [ngClass]="{'value-absolut':true, 'receita' : launch.category.typeValue == 'REVENUE', 'despesa': launch.category.typeValue == 'EXPENSE'}">R${{launch.value}}</p>
                     <div class="task-btn">
                         <button class="edit" [routerLink]="['/user/launches/update', launch.id]">✏️</button>
-                        <button class="delete" (click)="deleteLaunch()">🗑️</button>
+                        <button class="delete" (click)="deleteLaunchDialog(launch.id!)">🗑️</button>
                     </div>
                 </div>
             }
