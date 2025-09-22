@@ -1,1 +1,31 @@
-<p>update-launch works!</p>
+<app-navbar [text]="'Ver Lançamentos'" [textLink]="'/user/launches'"></app-navbar>
+<div class="container">
+    <h1>Editando Lançamento</h1>
+    <div class="container-form">
+        <div class="typeValue">
+            <button class="receive" (click)="categoriesRevenue()">Receita</button>
+            <button class="expense" (click)="categoriesExpense()">Despesa</button>
+        </div>
+        <div  [ngClass]="{'categories':true, 'display-none':notShowExpenses}">
+            @for (item of expenseCategories; track item.id) {
+                <button [ngClass]="{'btn-category':true, 'toggleBtn':item.id == selectedCategoryId}" (click)="toggleBtn(item.id)">{{item.name}}</button>
+            }
+        </div>
+        <div [ngClass]="{'categories':true, 'display-none':notShowRevenues}">
+            @for (item of revenueCategories; track item.id) {
+                <button [ngClass]="{'btn-category':true, 'toggleBtn':item.id == selectedCategoryId}" (click)="toggleBtn(item.id)">{{item.name}}</button>
+            }
+        </div>
+        <div class="forms-data">
+            <label>Descrição*</label>
+            <input type="text" name="" id="" placeholder="Digite aqui" [(ngModel)]="descCategory">
+            <label>Valor*</label>
+            <input type="number" name="" id="" placeholder="Digite aqui" [(ngModel)]="valueCategory">
+            <label>Data*</label>
+            <input type="date" name="" id="" [(ngModel)]="dateCategory">
+        </div>
+        <div class="btn-launch">
+            <button (click)="editLaunch()">Editar Lançamento</button>
+        </div>
+    </div>
+</div>
