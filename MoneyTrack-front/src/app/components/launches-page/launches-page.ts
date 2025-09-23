@@ -33,19 +33,22 @@ export class LaunchesPage {
       if (result){
         this.deleteLaunch(id)
         this.snackBar.open("Lançamento Excluido","Fechar",{duration: 3000})
-        this.ngOnInit()
       }
     })
   }
 
   deleteLaunch(id:number){
-    this.launchService.deleteLaunch(id).subscribe()
+    this.launchService.deleteLaunch(id).subscribe(() => {
+      this.showLaunches()
+    })
     console.log(id)
   }
 
   showLaunches(){
     this.launchService.getAllLaunches().subscribe(data => {
       this.launches = data;
+      this.revenueValue = 0;
+      this.expenseValue = 0;
       for(let launch of this.launches){
         if(launch.category.typeValue == "REVENUE"){
           this.revenueValue += launch.value
