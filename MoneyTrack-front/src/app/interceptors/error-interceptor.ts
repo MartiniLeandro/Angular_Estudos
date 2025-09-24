@@ -10,7 +10,9 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
 
   return next(req).pipe( catchError((erro) => {
       console.log(erro)
-      snackBar.open(erro.error.message,"fechar", {duration: 3000})
+      if(erro.error.message != "Não existe categoria com este ID"){
+        snackBar.open(erro.error.message,"fechar", {duration: 3000})
+      }
 
       return throwError(() => erro)
     }));
