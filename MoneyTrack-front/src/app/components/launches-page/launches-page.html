@@ -1,11 +1,34 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <div class="expenses">
-        <div class="grapich-expense">
-            teste
-        </div>
-        <div class="categories-expense">
-            teste
+    <div class="filters">
+        <h2 class="filter-title">Filtros dos lançamentos</h2>
+        <div class="expansions">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Filtrar por data</mat-panel-title>
+                </mat-expansion-panel-header>
+                <p class="p-filter">Data inicial e final:</p>
+                <mat-form-field>
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate placeholder="Start date">
+                        <input matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Filtrar por categoria</mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Filtrar por receitas ou despesas</mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
         </div>
     </div>
     <div class="value-tasks">
@@ -31,11 +54,6 @@
         </div>
     </div>
     <div class="revenues">
-        <div class="grapich-revenue">
-            teste
-        </div>
-        <div class="categories-revenue">
-            teste
-        </div>
+        <h2 class="grapich-title">Gráficos dos lançamentos</h2>
     </div>
 </div>

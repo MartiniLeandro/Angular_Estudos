@@ -7,10 +7,16 @@ import { RouterModule } from "@angular/router";
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialog } from '../../dialogs/confirm-dialog/confirm-dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {provideNativeDateAdapter} from '@angular/material/core';
 
 @Component({
   selector: 'app-launches-page',
-  imports: [Navbar, CommonModule, RouterModule],
+   providers: [provideNativeDateAdapter()],
+  imports: [Navbar, CommonModule, RouterModule, MatExpansionModule, MatDatepickerModule, MatFormField, MatInputModule],
   templateUrl: './launches-page.html',
   styleUrl: './launches-page.scss'
 })

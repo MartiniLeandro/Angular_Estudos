@@ -8,7 +8,7 @@
 }
 
 .value-tasks{
-    width: 45vw;
+    width: 670px;
     display: flex;
     flex-direction: column;
     row-gap: 50px;
@@ -28,9 +28,10 @@
     border-radius: 4px;
 }
 
-.revenues, .expenses {
+.revenues, .filters {
     background-color: #1E1E1E;
-    flex-grow: 1;
+    flex-grow: 0;
+    width: 400px;
     margin: 0px 20px;
     display: flex;
     gap: 50px;
@@ -90,4 +91,20 @@ p {
 .value-absolut {
     position: absolute;
     left: 50%;
+}
+
+.filter-title, .grapich-title {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+mat-expansion-panel {
+    width: 95pw;
+    margin: 10px;
+}
+
+.p-filter {
+    color: black;
+    padding: 10px;
 }
