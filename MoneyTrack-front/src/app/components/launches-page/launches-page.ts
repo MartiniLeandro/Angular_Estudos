@@ -12,6 +12,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormField } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {provideNativeDateAdapter} from '@angular/material/core';
+import { CategoryAPI } from '../../services/category/category.service';
+import { category } from '../../models/categoryData';
 
 @Component({
   selector: 'app-launches-page',
@@ -21,9 +23,11 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   styleUrl: './launches-page.scss'
 })
 export class LaunchesPage {
-  constructor(private launchService:Launches, private dialog:MatDialog, private snackBar:MatSnackBar){}
+  constructor(private launchService:Launches, private dialog:MatDialog, private snackBar:MatSnackBar, private categoryService:CategoryAPI){}
 
   launches:launch[] = [];
+  categoryRevenue:category[]= [];
+  categoryExpense:category[]= [];
   revenueValue:number = 0;
   expenseValue:number = 0;
   totalValue:number = 0;
@@ -31,6 +35,7 @@ export class LaunchesPage {
 
   ngOnInit(){
     this.showLaunches();
+    this.getCategories();
   }
 
   deleteLaunchDialog(id:number){
@@ -73,6 +78,19 @@ export class LaunchesPage {
     }else{
       this.value = true
     }
+  }
+
+  getCategories(){
+    this.categoryService.getAllCategories().subscribe(categories => {
+      for(let category of categories){
+        if(category.typeValue == "EXPENSE"){
+          this.categoryExpense.push(category)
+        }
+        else {
+          this.categoryRevenue.push(category)
+        }
+      }
+    })
   }
 
 }
