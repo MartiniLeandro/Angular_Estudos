@@ -108,3 +108,46 @@ mat-expansion-panel {
     color: black;
     padding: 10px;
 }
+
+.btn-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-filter-receive, .btn-filter-expense {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn-filter-receive {
+    background-color: green;
+}
+
+.btn-filter-expense {
+    background-color: red;
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    padding: 20px 5px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-category{
+    background-color: #121212;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+}

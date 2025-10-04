@@ -31,6 +31,8 @@ export class LaunchesPage {
   revenueValue:number = 0;
   expenseValue:number = 0;
   totalValue:number = 0;
+  notShowRevenues = true;
+  notShowExpenses = true;
   value=true;
 
   ngOnInit(){
@@ -91,6 +93,16 @@ export class LaunchesPage {
         }
       }
     })
+  }
+
+  showReceives(){
+    this.notShowRevenues = false;
+    this.notShowExpenses = true;
+  }
+
+  showExpenses(){
+    this.notShowExpenses = false;
+    this.notShowRevenues = true;
   }
 
 }

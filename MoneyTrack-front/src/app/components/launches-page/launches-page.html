@@ -24,8 +24,18 @@
                     <mat-panel-title>Filtrar por categoria</mat-panel-title>
                 </mat-expansion-panel-header>
                     <div class="btn-categories">
-                        <button>Receita</button>
-                        <button>Despesa</button>
+                        <button class="btn-filter-receive" (click)="showReceives()">Receita</button>
+                        <button class="btn-filter-expense" (click)="showExpenses()">Despesa</button>
+                    </div>
+                    <div [ngClass]="{'categories':true, 'display-none':notShowRevenues}">
+                        @for (item of categoryRevenue; track $index) {
+                           <button class="btn-category">{{item.name}}</button>
+                        }
+                    </div>
+                    <div [ngClass]="{'categories':true, 'display-none':notShowExpenses}">
+                        @for (item of categoryExpense; track $index) {
+                            <button class="btn-category">{{item.name}}</button>
+                        }
                     </div>
             </mat-expansion-panel>
             <mat-expansion-panel>
