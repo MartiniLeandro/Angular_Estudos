@@ -14,11 +14,12 @@ import { MatInputModule } from '@angular/material/input';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import { CategoryAPI } from '../../services/category/category.service';
 import { category } from '../../models/categoryData';
+import { DateFormatPipe } from '../../date-format-pipe';
 
 @Component({
   selector: 'app-launches-page',
    providers: [provideNativeDateAdapter()],
-  imports: [Navbar, CommonModule, RouterModule, MatExpansionModule, MatDatepickerModule, MatFormField, MatInputModule],
+  imports: [Navbar, CommonModule, RouterModule, MatExpansionModule, MatDatepickerModule, MatFormField, MatInputModule,DateFormatPipe],
   templateUrl: './launches-page.html',
   styleUrl: './launches-page.scss'
 })

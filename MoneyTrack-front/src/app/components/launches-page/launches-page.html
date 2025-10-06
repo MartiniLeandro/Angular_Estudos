@@ -53,6 +53,7 @@
         </div>
         <div class="tasks">
             @for (launch of launches; track launch.id) {
+                <p class="date-task">{{launch.date | dateFormat}}</p>
                 <div class="task">
                     <div class="infos">
                         <p class="categoryName">{{launch.category.name}}</p>
