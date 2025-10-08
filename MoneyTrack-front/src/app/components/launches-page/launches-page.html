@@ -18,6 +18,9 @@
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-date-range-picker #picker></mat-date-range-picker>
                 </mat-form-field>
+                <div class="btn-filter">
+                        <button class="filtrar">Filtrar</button>
+                </div>
             </mat-expansion-panel>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
@@ -37,11 +40,21 @@
                             <button class="btn-category">{{item.name}}</button>
                         }
                     </div>
+                    <div class="btn-filter">
+                        <button class="filtrar">Filtrar</button>
+                    </div>
             </mat-expansion-panel>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title>Filtrar por receitas ou despesas</mat-panel-title>
                 </mat-expansion-panel-header>
+                    <div class="btn-categories">
+                        <button class="btn-filter-receive">Receita</button>
+                        <button class="btn-filter-expense">Despesa</button>
+                    </div>
+                    <div class="btn-filter">
+                        <button class="filtrar">Filtrar</button>
+                    </div>
             </mat-expansion-panel>
         </div>
     </div>

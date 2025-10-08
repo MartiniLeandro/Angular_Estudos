@@ -1,7 +1,7 @@
 .container {
     background-color: #121212;
     width: 100%;
-    height: calc(93vh - 20px);
+    min-height: calc(93vh - 20px);
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
@@ -154,4 +154,20 @@ mat-expansion-panel {
 
 .date-task {
     margin: 5px 10px;
+}
+
+.filtrar{
+    border: none;
+    margin-top: 10px;
+    background-color: rgb(80, 80, 80);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: po;
+}
+
+.btn-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
