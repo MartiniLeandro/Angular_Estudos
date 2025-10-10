@@ -163,11 +163,20 @@ mat-expansion-panel {
     width: 200px;
     padding: 10px;
     border-radius: 10px;
-    cursor: po;
+    cursor: pointer;
 }
 
 .btn-filter{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.toggle-btn{
+    background-color: #807e7e;
+    border: 2px solid black;
+}
+
+.toggle-receive,.toggle-expense {
+    background-color: rgb(0, 0, 0);
 }

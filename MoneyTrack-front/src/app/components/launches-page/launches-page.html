@@ -32,12 +32,12 @@
                     </div>
                     <div [ngClass]="{'categories':true, 'display-none':notShowRevenues}">
                         @for (item of categoryRevenue; track $index) {
-                           <button class="btn-category">{{item.name}}</button>
+                           <button [ngClass]="{'btn-category':true, 'toggle-btn':item.id === selectedCategoryId}" (click)="toggleBtn(item.id)">{{item.name}}</button>
                         }
                     </div>
                     <div [ngClass]="{'categories':true, 'display-none':notShowExpenses}">
                         @for (item of categoryExpense; track $index) {
-                            <button class="btn-category">{{item.name}}</button>
+                            <button [ngClass]="{'btn-category':true, 'toggle-btn':item.id === selectedCategoryId}" (click)="toggleBtn(item.id)">{{item.name}}</button>
                         }
                     </div>
                     <div class="btn-filter">
@@ -49,8 +49,8 @@
                     <mat-panel-title>Filtrar por receitas ou despesas</mat-panel-title>
                 </mat-expansion-panel-header>
                     <div class="btn-categories">
-                        <button class="btn-filter-receive">Receita</button>
-                        <button class="btn-filter-expense">Despesa</button>
+                        <button [ngClass]="{'btn-filter-receive':true, 'toggle-receive':receiveToggle}" (click)="toggleType('receive')">Receita</button>
+                        <button [ngClass]="{'btn-filter-expense':true, 'toggle-expense':expenseToggle}"  (click)="toggleType('expense')">Despesa</button>
                     </div>
                     <div class="btn-filter">
                         <button class="filtrar">Filtrar</button>

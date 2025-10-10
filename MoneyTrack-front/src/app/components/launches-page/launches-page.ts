@@ -35,6 +35,9 @@ export class LaunchesPage {
   notShowRevenues = true;
   notShowExpenses = true;
   value=true;
+  selectedCategoryId:number = 0;
+  receiveToggle:boolean = false;
+  expenseToggle:boolean = false;
 
   ngOnInit(){
     this.showLaunches();
@@ -104,6 +107,20 @@ export class LaunchesPage {
   showExpenses(){
     this.notShowExpenses = false;
     this.notShowRevenues = true;
+  }
+
+  toggleBtn(id:number){
+    this.selectedCategoryId = id;
+  }
+
+  toggleType(type:string){
+    if(type == 'receive'){
+        this.receiveToggle = true;
+        this.expenseToggle = false;
+    }else if (type == 'expense'){
+        this.receiveToggle = false;
+        this.expenseToggle = true;
+    }
   }
 
 }
