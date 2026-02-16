@@ -12,7 +12,4 @@ export class FirstComponent {
   job:string = "Programmer";
   hobbie = ["Running"];
   car = {name: "Camaro"};
-
-  @Input() userName:string='';
-  @Input() data !: {email:string,idade:number};
 }

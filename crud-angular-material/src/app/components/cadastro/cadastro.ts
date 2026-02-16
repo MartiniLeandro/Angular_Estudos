@@ -5,7 +5,8 @@ import {FormsModule} from '@angular/forms'
 import {MatFormField} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
 import { MatIconModule } from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button'
+import {MatButtonModule} from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select'
 import { Cliente } from './cliente';
 import { ClienteService } from '../../services/cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -15,7 +16,7 @@ import { BrasilApiService } from '../../services/brasil-api.service';
 
 @Component({
   selector: 'app-cadastro',
-  imports: [FlexLayoutModule, MatCardModule, FormsModule, MatFormField, MatInputModule, MatIconModule, MatButtonModule],
+  imports: [FlexLayoutModule, MatCardModule, FormsModule, MatFormField, MatInputModule, MatIconModule, MatButtonModule, MatSelectModule],
   templateUrl: './cadastro.html',
   styleUrl: './cadastro.scss'
 })
@@ -55,6 +56,6 @@ export class Cadastro {
 
   listarUFs(){
     this.brasilApiService.listarUFs().subscribe(
-      {next: listaEstados => console.log(listaEstados), error: erro => console.log(erro)});
+      {next: listaEstados => this.estados = listaEstados, error: erro => console.log(erro)});
   }
 }
