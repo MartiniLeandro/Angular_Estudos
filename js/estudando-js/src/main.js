@@ -110,3 +110,20 @@ adicionarProduto(2,"notebook",2300, 1);
 adicionarProduto(1,"mesa",300, 1);
 console.log(carrinho)
 
+// TESTE ASYNC/AWAIT (await utilizar uma função com promise)
+
+const esperar = (ms) => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve("Terminou!");
+    }, ms);
+  });
+};
+
+const executar = async() => {
+    const esperarResultado = await esperar(3000);
+    console.log(esperarResultado);
+}
+
+executar();
+
