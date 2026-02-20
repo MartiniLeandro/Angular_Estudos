@@ -40,3 +40,59 @@ const sistemaAprovacao = (nome,nota1,nota2) => {
 }
 
 sistemaAprovacao("Leandro",0,9)
+
+console.log("--------------EXERCISE 4--------------")
+// EXERCISE 4
+
+const fizzBuzz = (number) => {
+    const arrayFizzBuzz = []
+    for(let i = 0; i <=number; i++){
+        if(i % 3 === 0 && i % 5 === 0){
+            arrayFizzBuzz.push("FizzBuzz")
+        }else if(i % 5 === 0){
+            arrayFizzBuzz.push("Buzz")
+
+        }else if (i % 3 === 0){
+            arrayFizzBuzz.push("Fizz")
+        }else {
+            arrayFizzBuzz.push(i)
+        }
+    }
+    return arrayFizzBuzz
+}
+
+console.log(fizzBuzz(100))
+
+console.log("--------------EXERCISE 5--------------")
+// EXERCISE 5
+
+const usuarios = [
+  { nome: "Ana", ativo: true },
+  { nome: "Carlos", ativo: false },
+  { nome: "Maria", ativo: true }
+]
+
+function pegarUsuariosAtivos(arr) {
+  const resultado = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].ativo === true) {
+      resultado.push(arr[i].nome);
+    }
+  }
+
+  return resultado;
+}
+
+console.log(pegarUsuariosAtivos(usuarios));
+
+console.log("--------------EXERCISE 6--------------")
+// EXERCISE 6
+
+const estado = {
+  nome: "Leandro",
+  idade: 25
+}
+
+const {nome} = estado;
+console.log({nome})
